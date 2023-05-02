@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .header{
+            align-items: center;
+        }
+        h1{
+            color: blueviolet;
+            text-shadow: 1px;
+            text-align: center;
+        }
+        .form1{
+            display: flex;
+            justify-content: center;
+            margin-top: 5%;
+            flex-wrap: wrap;
+            align-content:space-between;
+
+            
+            
+        } 
+        select{
+                width: 150px;
+            }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Car Price Prediction</h1>
+    </div>
+    <div class="form1">
+        <form action="#" method="post">
+        <div class="input1">  &nbsp; Horse Power &nbsp;&nbsp;<input type="number" name="one">
+            &nbsp; Curb Weight &nbsp;&nbsp;<input type="text" name="Two"> <br><br>
+            &nbsp;highway mpg &nbsp;&nbsp;<input type="text" name="Three"> 
+           &nbsp;Engine Size  &nbsp;&nbsp; <input type="text" name="four"><br><br>
+           &nbsp;Engine Location &nbsp;&nbsp;<select name="five">
+            <option value="front">front</option>
+            <option value="rear">rear</option>
+           </select>
+           &nbsp; make &nbsp;&nbsp; <select name="six">
+            <option value="alfa-romero">alfa-romero</option>
+            <option value="audi">audi</option>
+            <option value="bmw">bmw</option>
+            <option value="chevrolet">chevrolet</option>
+            <option value="dodge">dodge</option>
+            <option value="honda">honda</option>
+            <option value="isuzu">isuzu</option>
+            <option value="jaguar">jaguar</option>
+            <option value="mazda">mazda</option>
+            <option value="mercedes-benz">mercedes-benz</option>
+            <option value="mercury">mercury</option>
+            <option value="mitsubishi">mitsubishi</option>
+            <option value="nissan">nissan</option>
+            <option value="peugot">peugot</option>
+            <option value="plymouth">plymouth</option>
+            <option value="porsche">porsche</option>
+            <option value="renault">renault</option>
+            <option value="saab">saab</option>
+            <option value="subaru">subaru</option>
+            <option value="toyota">toyota</option>
+            <option value="volkswagen">volkswagen</option>
+            <option value="volvo">volvo</option>
+           </select><br><br>
+           &nbsp;wheel_Base &nbsp;&nbsp;<input type="text" name="seven">
+           &nbsp; Bore  &nbsp;&nbsp; <input type="text" name="eight">
+           <br><br>
+           &nbsp;diesel &nbsp;&nbsp;<select name="nine">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+           </select>
+           &nbsp;city mpg &nbsp;&nbsp; <input type="text" name="ten"><br><br>
+                <input type="submit"> </div>
+        </form>
+    </div>
+    {% if output  %}
+    <h1>Predicted price : ₹{{output}}</h1>
+    {% endif %}
+    <br>
+    {% if error  %}
+    <h1>{{error}}</h1>
+    {% endif %}
+    <div class="instructions">
+        Please follow below instructions.
+        <ul >
+            <li>Horse-power should be between 48 to 205</li>
+            <li>curb-weight should be between 1488 to 4066</li>
+            <li>Highway-mpg should be between 16 to 54</li>
+            <li>Engine-Size should be between 75 to 300</li>
+            <li>wheel-base should be between 87 to 120</li>
+            <li>bore should be between 2.54 to 3.32</li>
+            <li>city-mpg should be between 14 to 49</li>
+            <li>engine-location should be either rear or front (all lowercase)</li>
+            <li>diesel should be either yes or no (all lowecase)</li>
+
+        </ul>
+    </div>
+</body>
+</html>

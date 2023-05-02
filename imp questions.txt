@@ -1,0 +1,6 @@
+Descriptive statistics
+correlation
+Regression 
+types of regression
+anova, types
+libraries
